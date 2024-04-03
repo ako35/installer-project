@@ -23,7 +23,7 @@ function App() {
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/auth" element={<AuthPage />} />
-      <Route path="/installers" element={<InstallersPage />} />
+      <Route path="/installer" element={<InstallersPage />} />
       <Route path="/admin/*">
         <Route index element={<DashboardPage />} />
         <Route path="coupons/create" element={<CustomerFormPage />} />
