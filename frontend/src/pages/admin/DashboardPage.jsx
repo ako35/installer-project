@@ -11,8 +11,9 @@ const DashboardPage = () => {
     const fetchInstallers = async () => {
         try {
             const response = await fetch(`${apiUrl}/api/installers`);
-            const data = await response.json();
-            setInstallerCount(data.length);
+            const data = await response.json();  
+            const installerData = data.filter(installer => installer.role === "installer")          
+            setInstallerCount(installerData.length);
         } catch (error) {
             console.error('Error fetching installers:', error);
         }

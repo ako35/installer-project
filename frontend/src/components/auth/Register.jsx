@@ -49,7 +49,7 @@ const Register = () => {
         <div>
           <label>
             <span>
-              Username <span className="required">*</span>
+              Installer Name <span className="required">*</span>
             </span>
             <input type="text" onChange={handleInputChange} name="username" required />
           </label>
@@ -57,7 +57,7 @@ const Register = () => {
         <div>
           <label>
             <span>
-              Email address <span className="required">*</span>
+              Email Address <span className="required">*</span>
             </span>
             <input type="email" onChange={handleInputChange} name="email" required />
           </label>

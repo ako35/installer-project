@@ -1,6 +1,6 @@
 import React from 'react'
 import { Fragment } from "react";
-import Installers from "../../components/installer/İnstallers";
+import Installers from "../../components/installer/Installers";
 
 const InstallerPage = () => {
   return (

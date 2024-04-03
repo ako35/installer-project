@@ -2,7 +2,6 @@ import { Layout, Menu } from "antd";
 import PropTypes from "prop-types";
 import {
   UserOutlined,
-  LaptopOutlined,
   RollbackOutlined,
   BarcodeOutlined,
   DashboardOutlined,
@@ -57,30 +56,6 @@ const AdminLayout = ({ children }) => {
       ],
     },
     {
-      key: "5",
-      icon: <LaptopOutlined />,
-      label: "Ürünler",
-      path: "/",
-      children: [
-        {
-          key: "6",
-          label: "Ürün Listesi",
-          path: "/admin/products",
-          onClick: () => {
-            navigate(`/admin/products`);
-          },
-        },
-        {
-          key: "7",
-          label: "Yeni Ürün Oluştur",
-          path: "/admin/products/create",
-          onClick: () => {
-            navigate("/admin/products/create");
-          },
-        },
-      ],
-    },
-    {
       key: "8",
       icon: <BarcodeOutlined />,
       label: "Kuponlar",
@@ -107,7 +82,7 @@ const AdminLayout = ({ children }) => {
     {
       key: "11",
       icon: <UserOutlined />,
-      label: "Kullanıcı Listesi",
+      label: "Kurulumcu Listesi",
       path: "/admin/users",
       onClick: () => {
         navigate(`/admin/users`);

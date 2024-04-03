@@ -5,7 +5,7 @@ import Blogs from "../../components/blog/Blogs";
 const HomePage = () => {
   return (
     <React.Fragment>
-      <Sliders />                                                                                                
+      <Sliders />                                                                                 
       <Blogs />
     </React.Fragment>
   );

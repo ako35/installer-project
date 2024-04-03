@@ -1,5 +1,6 @@
 import { message } from "antd";
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +8,8 @@ const Login = () => {
     password: "",
   });
   const apiUrl = import.meta.env.VITE_API_BASE_URL;
+
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

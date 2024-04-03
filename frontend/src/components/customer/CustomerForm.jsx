@@ -17,6 +17,7 @@ const CustomerFormPage = () => {
   });
   
   const [installers, setInstallers] = useState([]);
+
   const [cities] = useState(['Istanbul', 'Ankara', 'Izmir']);
   const countries = {
     Istanbul: ['Sisli', 'Besiktas', 'Kadikoy'],
@@ -90,6 +91,7 @@ const CustomerFormPage = () => {
         country: "",
         installerCustomer: "",
       });
+
       message.success("Kayıt başarılı.");
     } else {
       console.error('Form gönderilirken hata oluştu!');
@@ -189,9 +191,9 @@ const CustomerFormPage = () => {
           <option value="" disabled>
             Kurulumcu Seçin:
           </option>
-          {installers.map((installerCustomer) => (
-            <option key={installerCustomer._id} value={installerCustomer._id}>
-              {installerCustomer.username}
+          {installers.filter(installer => installer.role === "installer").map((installer) => (
+            <option key={installer._id} value={installer._id}>
+              {installer.username}
             </option>
           ))}
         </select>
