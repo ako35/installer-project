@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SliderItem from "./SliderItem";
 import "./Sliders.css";
 
 const Sliders = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slideInterval = 5000; // 5 saniye
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % 3);
@@ -12,6 +14,15 @@ const Sliders = () => {
   const prevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + 3) % 3);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, slideInterval);
+
+    // Component unmount olduğunda interval'i temizle
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="slider">

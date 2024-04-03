@@ -15,6 +15,7 @@ import InstallersPage from "./pages/installer/InstallerPage";
 // admin
 import CustomerFormPage from "./pages/admin/CustomerFormPage";
 import DashboardPage from "./pages/admin/DashboardPage";
+import AdminInstallerPage from "./pages/admin/AdminInstallerPage";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
       <Route path="/installer" element={<InstallersPage />} />
       <Route path="/admin/*">
         <Route index element={<DashboardPage />} />
-        <Route path="coupons/create" element={<CustomerFormPage />} />
+        <Route path="customer-form" element={<CustomerFormPage />} />
+        <Route path="installer" element={<AdminInstallerPage />} />
       </Route>
     </Routes>
   );

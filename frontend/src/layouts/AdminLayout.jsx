@@ -58,34 +58,19 @@ const AdminLayout = ({ children }) => {
     {
       key: "8",
       icon: <BarcodeOutlined />,
-      label: "Kuponlar",
-      path: "/admin/coupons",
-      children: [
-        {
-          key: "9",
-          label: "Kupon Listesi",
-          path: "/admin/coupons",
-          onClick: () => {
-            navigate(`/admin/coupons`);
-          },
-        },
-        {
-          key: "10",
-          label: "Yeni Kupon Oluştur",
-          path: "/admin/coupons/create",
-          onClick: () => {
-            navigate("/admin/coupons/create");
-          },
-        },
-      ],
+      label: "Müşteri Formu",
+      path: "/admin/customer-form",
+      onClick: () => {
+        navigate(`/admin/customer-form`);
+      },
     },
     {
       key: "11",
       icon: <UserOutlined />,
       label: "Kurulumcu Listesi",
-      path: "/admin/users",
+      path: "/admin/installer",
       onClick: () => {
-        navigate(`/admin/users`);
+        navigate(`/admin/installer`);
       },
     },
     {
