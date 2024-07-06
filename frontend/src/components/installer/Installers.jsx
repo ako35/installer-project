@@ -38,7 +38,7 @@ const Installers = () => {
 
   return (
     <div id='customers' className="container mt-4">
-      <h2 className="mb-4">Kurulumcu Müşterileri</h2>
+      <h2 className="mb-4">{installer.username} Kurulumcu Müşterileri</h2>
       <div className="row">
         {filteredCustomers.map((customer) => (
           <div key={customer.id} className="col-md-4 mb-4">
@@ -51,7 +51,7 @@ const Installers = () => {
                   <strong>Adres:</strong> {customer.address}<br />
                   <strong>Şehir:</strong> {customer.city}<br />
                   <strong>İlçe:</strong> {customer.country}<br />
-                  <strong>installerCustomer:</strong> {customer.installerCustomer}
+                  <strong>Kurulumcu:</strong> {installer.username}
                 </Card.Text>
               </Card.Body>
             </Card>

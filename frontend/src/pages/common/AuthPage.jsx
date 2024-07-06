@@ -1,9 +1,12 @@
+import { Fragment } from "react";
 import Auth from "../../components/auth/Auth";
 
 
 const AuthPage = () => {
   return (
-      <Auth />
+      <Fragment>
+        <Auth />
+      </Fragment>
   );
 };
 

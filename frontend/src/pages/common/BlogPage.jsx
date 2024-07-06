@@ -1,11 +1,12 @@
+import { Fragment } from "react";
 import Blogs from "../../components/blog/Blogs";
 
 
 const BlogPage = () => {
   return (
-    <div className="blog-page">
+    <Fragment>
       <Blogs />
-    </div>
+    </Fragment>
   );
 };
 

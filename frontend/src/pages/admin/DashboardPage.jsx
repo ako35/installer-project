@@ -7,7 +7,6 @@ const DashboardPage = () => {
 
     const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
-
     const fetchInstallers = async () => {
         try {
             const response = await fetch(`${apiUrl}/api/installers`);
